@@ -132,10 +132,11 @@ O programa detecta e indexa **todos os arquivos `.txt`** da pasta automaticament
 ```
 Iniciando indexacao da pasta: ./textos
 
-  Indexando: estruturas.txt
-  Indexando: linguagem_c.txt
+  Indexando: arquivo1.txt
+  Indexando: arquivo2.txt
+  Indexando: arquivo3.txt
 
-2 arquivo(s) indexado(s) com sucesso!
+3 arquivo(s) indexado(s) com sucesso!
 ```
 
 ### 3. Digite o termo que deseja buscar
