@@ -188,7 +188,7 @@ Pesquise o termo: sair
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/indexador-hash-lpi.git
+https://github.com/BeatrizBrandao16/indexador_lp1.git
 cd indexador-hash-lpi
 
 # 2. Compile
