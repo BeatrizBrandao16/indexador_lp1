@@ -45,13 +45,13 @@ static void buscaLinear(const char* caminho_pasta, const char* termo) {
     printf("-------------------------------------------------\n");
 
     struct dirent* entrada;
-    int encontrou   = 0;
-    int pagina      = 0;
-    int continuar   = 1;
+    int encontrou = 0;
+    int pagina = 0;
+    int continuar = 1;
 
     while ((entrada = readdir(dir)) != NULL && continuar) {
         char* nome = entrada->d_name;
-        int   len  = (int) strlen(nome);
+        int len = (int) strlen(nome);
         if (len <= 4 || strcmp(nome + len - 4, ".txt") != 0) continue;
 
         char caminho[512];
@@ -138,9 +138,9 @@ void realizarBusca(const char* caminho_pasta) {
         printf("\nOcorrencias de '%s':\n", normalizado);
         printf("-------------------------------------------------\n");
 
-        Ocorrencia* oc    = reg->lista;
-        int count         = 0;
-        int continuar     = 1;
+        Ocorrencia* oc = reg->lista;
+        int count = 0;
+        int continuar = 1;
 
         while (oc != NULL && continuar) {
             exibirTrecho(caminho_pasta, oc->nome_arquivo, oc->offset);
