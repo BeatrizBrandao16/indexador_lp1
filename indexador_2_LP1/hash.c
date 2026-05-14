@@ -32,7 +32,7 @@ void inserirOuAtualizar(const char* termo, const char* nome_arquivo, long offset
             strncpy(nova->nome_arquivo, nome_arquivo, TAM_NOME_ARQ - 1);
             nova->nome_arquivo[TAM_NOME_ARQ - 1] = '\0';
             nova->offset = offset;
-            nova->prox   = atual->lista; 
+            nova->prox = atual->lista; 
             atual->lista = nova;
             return;
         }
@@ -45,7 +45,7 @@ void inserirOuAtualizar(const char* termo, const char* nome_arquivo, long offset
     strncpy(novo->termo, termo, TAM_TERMO - 1);
     novo->termo[TAM_TERMO - 1] = '\0';
     novo->lista = NULL;
-    novo->prox  = NULL;
+    novo->prox = NULL;
 
     Ocorrencia* oc = (Ocorrencia*) malloc(sizeof(Ocorrencia));
     if (!oc) { printf("Erro: sem memoria.\n"); free(novo); return; }
@@ -53,12 +53,12 @@ void inserirOuAtualizar(const char* termo, const char* nome_arquivo, long offset
     strncpy(oc->nome_arquivo, nome_arquivo, TAM_NOME_ARQ - 1);
     oc->nome_arquivo[TAM_NOME_ARQ - 1] = '\0';
     oc->offset = offset;
-    oc->prox   = NULL;
+    oc->prox = NULL;
 
     novo->lista = oc;
 
-    novo->prox    = tabela[idx];
-    tabela[idx]   = novo;
+    novo->prox = tabela[idx];
+    tabela[idx] = novo;
 }
 
 RegistroIndice* buscarTermo(const char* termo) {
