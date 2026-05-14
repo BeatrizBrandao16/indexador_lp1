@@ -14,6 +14,7 @@ Sistema de indexação textual desenvolvido em linguagem C que:
 - Armazena a localização exata (offset em bytes) de cada ocorrência
 - Usa uma **Tabela Hash com encadeamento** para buscas em tempo O(1)
 - Recupera trechos do texto via **acesso aleatório** com `fseek()`
+- Palavras com menos de 5 caracteres são buscadas sob demanda (busca linear), conforme o enunciado
 
 ---
 
