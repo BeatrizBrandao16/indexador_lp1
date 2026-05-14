@@ -23,17 +23,17 @@ void indexarArquivo(const char* caminho_arquivo, const char* nome_arquivo) {
 
     char palavra[TAM_TERMO];
     int  c;
-    int  tam          = 0;
-    int  dentro       = 0;   
-    long pos_atual    = 0;   
-    long inicio       = 0;   
+    int  tam = 0;
+    int  dentro = 0;   
+    long pos_atual = 0;   
+    long inicio = 0;   
 
     while ((c = fgetc(fp)) != EOF) {
         if (isalpha((unsigned char) c)) {
             if (!dentro) {
                 inicio = pos_atual; 
                 dentro = 1;
-                tam    = 0;
+                tam = 0;
             }
             if (tam < TAM_TERMO - 1) {
                 palavra[tam++] = (char) c;
@@ -77,7 +77,7 @@ void indexarPasta(const char* caminho_pasta) {
 
     while ((entrada = readdir(dir)) != NULL) {
         char* nome = entrada->d_name;
-        int   len  = (int) strlen(nome);
+        int len  = (int) strlen(nome);
 
         if (len > 4 && strcmp(nome + len - 4, ".txt") == 0) {
             char caminho[512];
