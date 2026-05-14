@@ -18,7 +18,7 @@ Sistema de indexação textual escrito em linguagem C puro que:
 
 ---
 
-## Estrutura do repositório
+## Estrutura do Repositório
 
 ```
 indexador_LP1/
@@ -28,6 +28,9 @@ indexador_LP1/
 ├── scanner.c    → leitura dos arquivos e indexação palavra por palavra
 ├── busca.c      → recuperação com fseek e interface interativa de busca
 └── textos/      → pasta com arquivos .txt de exemplo para teste
+ ├── arquivo1.txt
+ └── arquivo2.txt
+ └── arquivo3.txt
 ```
 
 ---
